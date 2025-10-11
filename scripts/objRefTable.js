@@ -27,7 +27,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Cnds.EveryTick,
 		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.Touch.Cnds.IsTouchingObject,
-		C3.Behaviors.Platform.Acts.SimulateControl
+		C3.Behaviors.Platform.Acts.SimulateControl,
+		C3.Plugins.System.Acts.GoToLayout
 	];
 };
 self.C3_JsPropNameTable = [
@@ -35,6 +36,7 @@ self.C3_JsPropNameTable = [
 	{СледитьЗа: 0},
 	{BoundToLayout: 0},
 	{Спрайт2: 0},
+	{Sprite: 0},
 	{Sine: 0},
 	{Solid: 0},
 	{platform: 0},
@@ -51,11 +53,13 @@ self.C3_JsPropNameTable = [
 	{btn_right: 0},
 	{btn_left: 0},
 	{btn_jump: 0},
+	{ТайловыйФон5: 0},
 	{score: 0}
 ];
 
 self.InstanceType = {
 	Спрайт2: class extends self.ISpriteInstance {},
+	Sprite: class extends self.ISpriteInstance {},
 	platform: class extends self.ISpriteInstance {},
 	Текст: class extends self.ITextInstance {},
 	ver: class extends self.ITextInstance {},
@@ -68,5 +72,6 @@ self.InstanceType = {
 	Touch: class extends self.IInstance {},
 	btn_right: class extends self.ISpriteInstance {},
 	btn_left: class extends self.ISpriteInstance {},
-	btn_jump: class extends self.ISpriteInstance {}
+	btn_jump: class extends self.ISpriteInstance {},
+	ТайловыйФон5: class extends self.ITiledBackgroundInstance {}
 }
