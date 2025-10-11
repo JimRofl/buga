@@ -1,0 +1,70 @@
+const C3 = self.C3;
+self.C3_GetObjectRefTable = function () {
+	return [
+		C3.Plugins.Sprite,
+		C3.Behaviors.Platform,
+		C3.Behaviors.scrollto,
+		C3.Behaviors.bound,
+		C3.Behaviors.Sin,
+		C3.Behaviors.solid,
+		C3.Plugins.TiledBg,
+		C3.Plugins.Keyboard,
+		C3.Plugins.Text,
+		C3.Plugins.Touch,
+		C3.Plugins.Sprite.Cnds.CompareY,
+		C3.Plugins.System.Acts.RestartLayout,
+		C3.Plugins.System.Acts.ResetEventVar,
+		C3.Plugins.Keyboard.Cnds.OnKey,
+		C3.Plugins.Sprite.Acts.SetMirrored,
+		C3.Behaviors.scrollto.Acts.SetEnabled,
+		C3.Behaviors.Platform.Cnds.IsMoving,
+		C3.Plugins.Sprite.Acts.SetAnim,
+		C3.Behaviors.Platform.Cnds.CompareSpeed,
+		C3.Behaviors.Platform.Cnds.IsJumping,
+		C3.Plugins.Sprite.Cnds.OnCollision,
+		C3.Plugins.System.Acts.AddVar,
+		C3.Plugins.Sprite.Acts.Destroy,
+		C3.Plugins.System.Cnds.EveryTick,
+		C3.Plugins.Text.Acts.SetText,
+		C3.Plugins.Touch.Cnds.IsTouchingObject,
+		C3.Behaviors.Platform.Acts.SimulateControl
+	];
+};
+self.C3_JsPropNameTable = [
+	{Платформер: 0},
+	{СледитьЗа: 0},
+	{BoundToLayout: 0},
+	{Спрайт2: 0},
+	{Sine: 0},
+	{Solid: 0},
+	{platform: 0},
+	{Твёрдый: 0},
+	{ТайловыйФон: 0},
+	{ТайловыйФон2: 0},
+	{ТайловыйФон3: 0},
+	{ТайловыйФон4: 0},
+	{Клавиатура: 0},
+	{Спрайт: 0},
+	{Текст: 0},
+	{Touch: 0},
+	{btn_right: 0},
+	{btn_left: 0},
+	{btn_jump: 0},
+	{score: 0}
+];
+
+self.InstanceType = {
+	Спрайт2: class extends self.ISpriteInstance {},
+	platform: class extends self.ISpriteInstance {},
+	ТайловыйФон: class extends self.ITiledBackgroundInstance {},
+	ТайловыйФон2: class extends self.ITiledBackgroundInstance {},
+	ТайловыйФон3: class extends self.ITiledBackgroundInstance {},
+	ТайловыйФон4: class extends self.ITiledBackgroundInstance {},
+	Клавиатура: class extends self.IInstance {},
+	Спрайт: class extends self.ISpriteInstance {},
+	Текст: class extends self.ITextInstance {},
+	Touch: class extends self.IInstance {},
+	btn_right: class extends self.ISpriteInstance {},
+	btn_left: class extends self.ISpriteInstance {},
+	btn_jump: class extends self.ISpriteInstance {}
+}
