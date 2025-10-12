@@ -11,9 +11,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.TiledBg,
 		C3.Plugins.Keyboard,
 		C3.Plugins.Touch,
-		C3.Plugins.Sprite.Cnds.CompareY,
-		C3.Plugins.System.Acts.RestartLayout,
-		C3.Plugins.System.Acts.ResetEventVar,
+		C3.Plugins.Audio,
 		C3.Plugins.Keyboard.Cnds.OnKey,
 		C3.Plugins.Sprite.Acts.SetMirrored,
 		C3.Behaviors.scrollto.Acts.SetEnabled,
@@ -24,11 +22,18 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.System.Acts.AddVar,
 		C3.Plugins.Sprite.Acts.Destroy,
+		C3.Plugins.Audio.Acts.Play,
 		C3.Plugins.System.Cnds.EveryTick,
 		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.Touch.Cnds.IsTouchingObject,
 		C3.Behaviors.Platform.Acts.SimulateControl,
-		C3.Plugins.System.Acts.GoToLayout
+		C3.Plugins.System.Acts.GoToLayout,
+		C3.Plugins.Audio.Acts.Stop,
+		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Plugins.System.Acts.Wait,
+		C3.Plugins.Sprite.Cnds.OnDestroyed,
+		C3.Plugins.System.Acts.CreateObject,
+		C3.Plugins.TiledBg.Acts.MoveToTop
 	];
 };
 self.C3_JsPropNameTable = [
@@ -57,6 +62,8 @@ self.C3_JsPropNameTable = [
 	{btn_left: 0},
 	{btn_jump: 0},
 	{ТайловыйФон5: 0},
+	{Sprite4: 0},
+	{Audio: 0},
 	{score: 0}
 ];
 
@@ -79,5 +86,7 @@ self.InstanceType = {
 	btn_right: class extends self.ISpriteInstance {},
 	btn_left: class extends self.ISpriteInstance {},
 	btn_jump: class extends self.ISpriteInstance {},
-	ТайловыйФон5: class extends self.ITiledBackgroundInstance {}
+	ТайловыйФон5: class extends self.ITiledBackgroundInstance {},
+	Sprite4: class extends self.ISpriteInstance {},
+	Audio: class extends self.IInstance {}
 }
