@@ -28,8 +28,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.Touch.Cnds.IsTouchingObject,
 		C3.Behaviors.Platform.Acts.SimulateControl,
-		C3.Plugins.System.Acts.GoToLayout,
-		C3.Plugins.System.Acts.SetFullscreenQuality
+		C3.Plugins.System.Acts.GoToLayout
 	];
 };
 self.C3_JsPropNameTable = [
@@ -39,11 +38,13 @@ self.C3_JsPropNameTable = [
 	{Спрайт2: 0},
 	{Sprite: 0},
 	{Sprite2: 0},
+	{Sprite3: 0},
 	{Sine: 0},
 	{Solid: 0},
 	{platform: 0},
 	{Текст: 0},
 	{ver: 0},
+	{Text: 0},
 	{Твёрдый: 0},
 	{ТайловыйФон: 0},
 	{ТайловыйФон2: 0},
@@ -63,9 +64,11 @@ self.InstanceType = {
 	Спрайт2: class extends self.ISpriteInstance {},
 	Sprite: class extends self.ISpriteInstance {},
 	Sprite2: class extends self.ISpriteInstance {},
+	Sprite3: class extends self.ISpriteInstance {},
 	platform: class extends self.ISpriteInstance {},
 	Текст: class extends self.ITextInstance {},
 	ver: class extends self.ITextInstance {},
+	Text: class extends self.ITextInstance {},
 	ТайловыйФон: class extends self.ITiledBackgroundInstance {},
 	ТайловыйФон2: class extends self.ITiledBackgroundInstance {},
 	ТайловыйФон3: class extends self.ITiledBackgroundInstance {},
