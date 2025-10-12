@@ -28,7 +28,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.Touch.Cnds.IsTouchingObject,
 		C3.Behaviors.Platform.Acts.SimulateControl,
-		C3.Plugins.System.Acts.GoToLayout
+		C3.Plugins.System.Acts.GoToLayout,
+		C3.Plugins.System.Acts.SetFullscreenQuality
 	];
 };
 self.C3_JsPropNameTable = [
@@ -37,6 +38,7 @@ self.C3_JsPropNameTable = [
 	{BoundToLayout: 0},
 	{Спрайт2: 0},
 	{Sprite: 0},
+	{Sprite2: 0},
 	{Sine: 0},
 	{Solid: 0},
 	{platform: 0},
@@ -60,6 +62,7 @@ self.C3_JsPropNameTable = [
 self.InstanceType = {
 	Спрайт2: class extends self.ISpriteInstance {},
 	Sprite: class extends self.ISpriteInstance {},
+	Sprite2: class extends self.ISpriteInstance {},
 	platform: class extends self.ISpriteInstance {},
 	Текст: class extends self.ITextInstance {},
 	ver: class extends self.ITextInstance {},
