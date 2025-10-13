@@ -34,6 +34,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Cnds.OnDestroyed,
 		C3.Plugins.System.Acts.CreateObject,
 		C3.Plugins.TiledBg.Acts.MoveToTop,
+		C3.Plugins.Touch.Cnds.OnTapGestureObject,
+		C3.Plugins.System.Acts.GoToLayoutByName,
 		C3.Plugins.Touch.Cnds.OnTouchObject,
 		C3.Plugins.Sprite.Acts.SetAnimFrame
 	];
@@ -48,10 +50,11 @@ self.C3_JsPropNameTable = [
 	{btn_play: 0},
 	{btn_settings: 0},
 	{btn_shop: 0},
+	{game_title: 0},
 	{Sine: 0},
 	{Solid: 0},
 	{platform: 0},
-	{Текст: 0},
+	{scrore_count: 0},
 	{ver: 0},
 	{Text: 0},
 	{Твёрдый: 0},
@@ -70,6 +73,7 @@ self.C3_JsPropNameTable = [
 	{Audio: 0},
 	{Sprite5: 0},
 	{Sprite6: 0},
+	{settings: 0},
 	{score: 0}
 ];
 
@@ -80,8 +84,9 @@ self.InstanceType = {
 	btn_play: class extends self.ISpriteInstance {},
 	btn_settings: class extends self.ISpriteInstance {},
 	btn_shop: class extends self.ISpriteInstance {},
+	game_title: class extends self.ISpriteInstance {},
 	platform: class extends self.ISpriteInstance {},
-	Текст: class extends self.ITextInstance {},
+	scrore_count: class extends self.ITextInstance {},
 	ver: class extends self.ITextInstance {},
 	Text: class extends self.ITextInstance {},
 	ТайловыйФон: class extends self.ITiledBackgroundInstance {},
@@ -98,5 +103,6 @@ self.InstanceType = {
 	Sprite4: class extends self.ISpriteInstance {},
 	Audio: class extends self.IInstance {},
 	Sprite5: class extends self.ISpriteInstance {},
-	Sprite6: class extends self.ISpriteInstance {}
+	Sprite6: class extends self.ISpriteInstance {},
+	settings: class extends self.ISpriteInstance {}
 }

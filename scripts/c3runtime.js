@@ -1275,6 +1275,8 @@ self.C3_ExpressionFuncs = [
 		() => 200,
 		() => 500,
 		() => "",
+		() => "snd_settings_btn",
+		() => "Menu",
 		() => "snd_menu_theme",
 		() => 0.3
 ];
