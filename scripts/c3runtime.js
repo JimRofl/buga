@@ -1277,6 +1277,12 @@ self.C3_ExpressionFuncs = [
 		() => "",
 		() => "snd_settings_btn",
 		() => "Menu",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => n0.ExpInstVar();
+		},
+		() => 10700,
+		() => 610,
 		() => "snd_menu_theme",
 		() => 0.3
 ];
