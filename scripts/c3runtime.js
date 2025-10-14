@@ -1268,22 +1268,22 @@ self.C3_ExpressionFuncs = [
 			const v0 = p._GetNode(0).GetVar();
 			return () => v0.GetValue();
 		},
-		() => "snd_theme_01",
 		() => -20,
-		() => "snd_char_fail",
-		() => 0.2,
-		() => 200,
-		() => 500,
-		() => "",
+		() => "snd_theme_01",
 		() => "snd_settings_btn",
 		() => "Menu",
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpInstVar();
 		},
-		() => 10700,
-		() => 610,
+		() => "snd_char_fail",
+		() => 0.2,
+		p => {
+			const n0 = p._GetNode(0);
+			return () => n0.ExpObject();
+		},
 		() => "snd_menu_theme",
+		() => "",
 		() => 0.3
 ];
 

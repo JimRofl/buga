@@ -27,17 +27,20 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.Touch.Cnds.IsTouchingObject,
 		C3.Behaviors.Platform.Acts.SimulateControl,
-		C3.Plugins.System.Acts.GoToLayout,
-		C3.Plugins.Audio.Acts.Stop,
 		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Plugins.Touch.Cnds.OnTapGestureObject,
+		C3.Plugins.Audio.Acts.Stop,
+		C3.Plugins.System.Acts.GoToLayoutByName,
+		C3.Plugins.System.Acts.SetVar,
+		C3.Plugins.System.Cnds.Compare,
+		C3.Plugins.System.Acts.RestartLayout,
+		C3.Plugins.System.Acts.GoToLayout,
 		C3.Plugins.Text.Acts.SubInstanceVar,
 		C3.Plugins.System.Acts.Wait,
-		C3.Plugins.Sprite.Cnds.OnDestroyed,
-		C3.Plugins.System.Acts.CreateObject,
-		C3.Plugins.TiledBg.Acts.MoveToTop,
-		C3.Plugins.Touch.Cnds.OnTapGestureObject,
-		C3.Plugins.System.Acts.GoToLayoutByName,
-		C3.Plugins.System.Cnds.Compare,
+		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
+		C3.Plugins.Sprite.Acts.SetPos,
+		C3.Plugins.Sprite.Exps.X,
+		C3.Plugins.Sprite.Exps.Y,
 		C3.Plugins.Touch.Cnds.OnTouchObject,
 		C3.Plugins.Sprite.Acts.SetAnimFrame
 	];
@@ -57,6 +60,8 @@ self.C3_JsPropNameTable = [
 	{Solid: 0},
 	{platform: 0},
 	{count_layer: 0},
+	{cp_id: 0},
+	{checkpoint: 0},
 	{scrore_count: 0},
 	{ver: 0},
 	{Text: 0},
@@ -81,7 +86,8 @@ self.C3_JsPropNameTable = [
 	{settings: 0},
 	{icon_star: 0},
 	{Sprite3: 0},
-	{score: 0}
+	{score: 0},
+	{current_checkpoint: 0}
 ];
 
 self.InstanceType = {
@@ -94,6 +100,7 @@ self.InstanceType = {
 	game_title: class extends self.ISpriteInstance {},
 	platform: class extends self.ISpriteInstance {},
 	count_layer: class extends self.ISpriteInstance {},
+	checkpoint: class extends self.ISpriteInstance {},
 	scrore_count: class extends self.ITextInstance {},
 	ver: class extends self.ITextInstance {},
 	Text: class extends self.ITextInstance {},
