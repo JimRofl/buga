@@ -34,7 +34,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.System.Cnds.Compare,
 		C3.Plugins.System.Acts.RestartLayout,
-		C3.Plugins.System.Acts.GoToLayout,
+		C3.Plugins.System.Cnds.CompareVar,
+		C3.Plugins.System.Acts.NextPrevLayout,
 		C3.Plugins.Text.Acts.SubInstanceVar,
 		C3.Plugins.System.Acts.Wait,
 		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
@@ -42,7 +43,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Exps.X,
 		C3.Plugins.Sprite.Exps.Y,
 		C3.Plugins.Touch.Cnds.OnTouchObject,
-		C3.Plugins.Sprite.Acts.SetAnimFrame
+		C3.Plugins.Sprite.Acts.SetAnimFrame,
+		C3.Plugins.System.Acts.GoToLayout
 	];
 };
 self.C3_JsPropNameTable = [
@@ -61,10 +63,11 @@ self.C3_JsPropNameTable = [
 	{platform: 0},
 	{count_layer: 0},
 	{cp_id: 0},
+	{checkpoint_state: 0},
 	{checkpoint: 0},
 	{scrore_count: 0},
-	{ver: 0},
-	{Text: 0},
+	{version_counter: 0},
+	{btn_menu_text: 0},
 	{count_lives: 0},
 	{score_lifes: 0},
 	{Твёрдый: 0},
@@ -102,8 +105,8 @@ self.InstanceType = {
 	count_layer: class extends self.ISpriteInstance {},
 	checkpoint: class extends self.ISpriteInstance {},
 	scrore_count: class extends self.ITextInstance {},
-	ver: class extends self.ITextInstance {},
-	Text: class extends self.ITextInstance {},
+	version_counter: class extends self.ITextInstance {},
+	btn_menu_text: class extends self.ITextInstance {},
 	score_lifes: class extends self.ITextInstance {},
 	ТайловыйФон: class extends self.ITiledBackgroundInstance {},
 	ТайловыйФон2: class extends self.ITiledBackgroundInstance {},
