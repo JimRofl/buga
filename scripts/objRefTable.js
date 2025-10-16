@@ -44,6 +44,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetPos,
 		C3.Plugins.Sprite.Exps.X,
 		C3.Plugins.Sprite.Exps.Y,
+		C3.Plugins.Text.Acts.AddInstanceVar,
 		C3.Plugins.Touch.Cnds.OnTouchObject,
 		C3.Plugins.Sprite.Acts.SetAnimFrame,
 		C3.Plugins.System.Acts.GoToLayout
@@ -53,7 +54,7 @@ self.C3_JsPropNameTable = [
 	{Платформер: 0},
 	{СледитьЗа: 0},
 	{BoundToLayout: 0},
-	{Спрайт2: 0},
+	{Character: 0},
 	{Sprite: 0},
 	{Sprite2: 0},
 	{btn_play: 0},
@@ -95,7 +96,7 @@ self.C3_JsPropNameTable = [
 ];
 
 self.InstanceType = {
-	Спрайт2: class extends self.ISpriteInstance {},
+	Character: class extends self.ISpriteInstance {},
 	Sprite: class extends self.ISpriteInstance {},
 	Sprite2: class extends self.ISpriteInstance {},
 	btn_play: class extends self.ISpriteInstance {},
