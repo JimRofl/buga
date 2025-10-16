@@ -1276,6 +1276,7 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			return () => n0.ExpInstVar();
 		},
+		() => "Checkpoint_idle",
 		() => "Checkpoint_on",
 		() => "snd_char_fail",
 		() => 0.2,
