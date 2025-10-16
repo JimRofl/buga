@@ -1278,6 +1278,7 @@ self.C3_ExpressionFuncs = [
 		},
 		() => "Checkpoint_idle",
 		() => "Checkpoint_on",
+		() => "",
 		() => "snd_char_fail",
 		() => 0.2,
 		p => {
@@ -1285,7 +1286,6 @@ self.C3_ExpressionFuncs = [
 			return () => n0.ExpObject();
 		},
 		() => "snd_menu_theme",
-		() => "",
 		() => 0.3
 ];
 
