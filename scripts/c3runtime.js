@@ -1269,7 +1269,7 @@ self.C3_ExpressionFuncs = [
 			return () => v0.GetValue();
 		},
 		() => -20,
-		() => "snd_theme_01",
+		() => "snd_theme_03",
 		() => "snd_settings_btn",
 		() => "Menu",
 		p => {
