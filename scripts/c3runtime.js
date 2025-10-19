@@ -1331,7 +1331,11 @@ self.C3_ExpressionFuncs = [
 			return () => n0.ExpObject();
 		},
 		() => "snd_menu_theme",
-		() => 0.3
+		() => 0.9,
+		() => 54,
+		() => 60,
+		() => 3,
+		() => 2
 ];
 
 
