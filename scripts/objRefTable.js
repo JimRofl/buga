@@ -10,6 +10,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text,
 		C3.Plugins.TiledBg,
 		C3.Plugins.Tilemap,
+		C3.Plugins.NinePatch,
 		C3.Plugins.Keyboard,
 		C3.Plugins.Touch,
 		C3.Plugins.Audio,
@@ -51,7 +52,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text.Cnds.CompareInstanceVar,
 		C3.Plugins.Sprite.Acts.SetScale,
 		C3.Plugins.Text.Acts.SetFontSize,
-		C3.Plugins.System.Acts.GoToLayout
+		C3.Plugins.System.Acts.GoToLayout,
+		C3.Plugins.System.Acts.SubVar,
+		C3.Plugins.Sprite.Acts.SetAnimFrame
 	];
 };
 self.C3_JsPropNameTable = [
@@ -99,11 +102,18 @@ self.C3_JsPropNameTable = [
 	{map_back: 0},
 	{Sprite2: 0},
 	{btn_map_back: 0},
+	{lvl_bottom_layer: 0},
+	{lvl_window_title: 0},
+	{enemy_count: 0},
+	{enemy: 0},
+	{btn_map_left: 0},
+	{btn_map_right: 0},
 	{Клавиатура: 0},
 	{Touch: 0},
 	{Audio: 0},
 	{score: 0},
-	{current_checkpoint: 0}
+	{current_checkpoint: 0},
+	{enemy_type: 0}
 ];
 
 self.InstanceType = {
@@ -142,6 +152,11 @@ self.InstanceType = {
 	map_back: class extends self.ISpriteInstance {},
 	Sprite2: class extends self.ISpriteInstance {},
 	btn_map_back: class extends self.ISpriteInstance {},
+	lvl_bottom_layer: class extends self.IWorldInstance {},
+	lvl_window_title: class extends self.ISpriteInstance {},
+	enemy: class extends self.ISpriteInstance {},
+	btn_map_left: class extends self.ISpriteInstance {},
+	btn_map_right: class extends self.ISpriteInstance {},
 	Клавиатура: class extends self.IInstance {},
 	Touch: class extends self.IInstance {},
 	Audio: class extends self.IInstance {}
