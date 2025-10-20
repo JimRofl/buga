@@ -1332,7 +1332,7 @@ self.C3_ExpressionFuncs = [
 		() => -20,
 		() => "snd_theme_03",
 		() => "snd_settings_btn",
-		() => "Menu",
+		() => "Map",
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpInstVar();
@@ -1351,6 +1351,34 @@ self.C3_ExpressionFuncs = [
 		() => 54,
 		() => 60,
 		() => 3,
+		() => 9,
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (263 * v0.GetValue());
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (231 * v0.GetValue());
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0();
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() + 1);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() - 35);
+		},
+		() => 4,
+		() => 50,
+		p => {
+			const n0 = p._GetNode(0);
+			return () => and("Level_", n0.ExpInstVar());
+		},
+		() => 0.3,
 		() => 7
 ];
 

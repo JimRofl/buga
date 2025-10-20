@@ -56,8 +56,15 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetScale,
 		C3.Plugins.Text.Acts.SetFontSize,
 		C3.Plugins.System.Acts.GoToLayout,
-		C3.Plugins.System.Acts.SubVar,
-		C3.Plugins.Sprite.Acts.SetAnimFrame
+		C3.Plugins.System.Cnds.For,
+		C3.Plugins.System.Acts.CreateObject,
+		C3.Plugins.Sprite.Acts.SetInstanceVar,
+		C3.Plugins.System.Exps.loopindex,
+		C3.Plugins.Sprite.Acts.SetAnimFrame,
+		C3.Plugins.Text.Acts.Destroy,
+		C3.Plugins.Sprite.Cnds.CompareFrame,
+		C3.Behaviors.Sin.Acts.SetEnabled,
+		C3.Plugins.System.Acts.SubVar
 	];
 };
 self.C3_JsPropNameTable = [
@@ -75,6 +82,7 @@ self.C3_JsPropNameTable = [
 	{version_counter: 0},
 	{text_state: 0},
 	{btn_menu_text: 0},
+	{lvl_btn_number: 0},
 	{star_on_level: 0},
 	{Твёрдый: 0},
 	{ТайловыйФон: 0},
@@ -112,12 +120,17 @@ self.C3_JsPropNameTable = [
 	{enemy: 0},
 	{btn_map_left: 0},
 	{btn_map_right: 0},
+	{lvl_btn_state: 0},
+	{lvl_button: 0},
 	{Клавиатура: 0},
 	{Touch: 0},
 	{Audio: 0},
 	{score: 0},
 	{current_checkpoint: 0},
-	{enemy_type: 0}
+	{enemy_type: 0},
+	{map_gorizont: 0},
+	{map_vertical: 0},
+	{levels_complete: 0}
 ];
 
 self.InstanceType = {
@@ -128,6 +141,7 @@ self.InstanceType = {
 	checkpoint: class extends self.ISpriteInstance {},
 	version_counter: class extends self.ITextInstance {},
 	btn_menu_text: class extends self.ITextInstance {},
+	lvl_btn_number: class extends self.ITextInstance {},
 	star_on_level: class extends self.ISpriteInstance {},
 	ТайловыйФон: class extends self.ITiledBackgroundInstance {},
 	ТайловыйФон3: class extends self.ITiledBackgroundInstance {},
@@ -161,6 +175,7 @@ self.InstanceType = {
 	enemy: class extends self.ISpriteInstance {},
 	btn_map_left: class extends self.ISpriteInstance {},
 	btn_map_right: class extends self.ISpriteInstance {},
+	lvl_button: class extends self.ISpriteInstance {},
 	Клавиатура: class extends self.IInstance {},
 	Touch: class extends self.IInstance {},
 	Audio: class extends self.IInstance {}
