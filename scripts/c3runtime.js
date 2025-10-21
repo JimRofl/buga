@@ -1354,11 +1354,11 @@ self.C3_ExpressionFuncs = [
 		() => 9,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
-			return () => (263 * v0.GetValue());
+			return () => ((263 * v0.GetValue()) + 160);
 		},
 		p => {
 			const v0 = p._GetNode(0).GetVar();
-			return () => (231 * v0.GetValue());
+			return () => ((231 * v0.GetValue()) + 130);
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
