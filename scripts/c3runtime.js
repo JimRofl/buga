@@ -1408,7 +1408,7 @@ self.C3_ExpressionFuncs = [
 		() => 9,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
-			return () => ((250 * v0.GetValue()) + 175);
+			return () => ((250 * v0.GetValue()) + 174);
 		},
 		p => {
 			const v0 = p._GetNode(0).GetVar();
@@ -1433,7 +1433,29 @@ self.C3_ExpressionFuncs = [
 			return () => and("Level_", n0.ExpInstVar());
 		},
 		() => 0.3,
-		() => 7
+		() => "group_enemy_state",
+		() => "Эпизод 1 : Гаврюша",
+		() => "Эпизод 2 : Михасик",
+		() => "Эпизод 3 : Тортилыч",
+		() => "Эпизод 4 : Беляшик",
+		() => "Эпизод 5 : Выдрочка",
+		() => 5,
+		() => "Эпизод 6 : Косой",
+		() => 6,
+		() => "Эпизод 7 : Эмочка",
+		() => 7,
+		() => "Эпизод 8 : Кощейка",
+		() => "group_arrows_left_right",
+		() => "loop_epesode_points",
+		() => 8,
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (355 + n0.ExpObject());
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (1003 + n0.ExpObject());
+		}
 ];
 
 

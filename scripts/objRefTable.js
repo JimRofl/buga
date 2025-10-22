@@ -65,6 +65,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text.Acts.Destroy,
 		C3.Plugins.Sprite.Cnds.CompareFrame,
 		C3.Behaviors.Sin.Acts.SetEnabled,
+		C3.Plugins.System.Cnds.IsGroupActive,
 		C3.Plugins.System.Acts.SubVar
 	];
 };
@@ -84,6 +85,7 @@ self.C3_JsPropNameTable = [
 	{text_state: 0},
 	{btn_menu_text: 0},
 	{lvl_btn_number: 0},
+	{lv_map_title_name: 0},
 	{txt_lvl_win_tittle: 0},
 	{star_on_level: 0},
 	{Твёрдый: 0},
@@ -124,6 +126,7 @@ self.C3_JsPropNameTable = [
 	{btn_map_right: 0},
 	{lvl_btn_state: 0},
 	{lvl_button: 0},
+	{spr_episode_points: 0},
 	{Клавиатура: 0},
 	{Touch: 0},
 	{Audio: 0},
@@ -132,7 +135,8 @@ self.C3_JsPropNameTable = [
 	{enemy_type: 0},
 	{map_gorizont: 0},
 	{map_vertical: 0},
-	{levels_complete: 0}
+	{levels_complete: 0},
+	{gv_map_state: 0}
 ];
 
 self.InstanceType = {
@@ -179,6 +183,7 @@ self.InstanceType = {
 	btn_map_left: class extends self.ISpriteInstance {},
 	btn_map_right: class extends self.ISpriteInstance {},
 	lvl_button: class extends self.ISpriteInstance {},
+	spr_episode_points: class extends self.ISpriteInstance {},
 	Клавиатура: class extends self.IInstance {},
 	Touch: class extends self.IInstance {},
 	Audio: class extends self.IInstance {}
